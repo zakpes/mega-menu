@@ -85,20 +85,36 @@ a:not([href]):not([tabindex]).dropdown-toggle-level-1.active {
 }
 
 ul.dropdown-menu {
-    padding: 10px 30px;
+    padding: 10px 0 10px 40px;
     background-color: hsl(220, 13%, 95.5%);
     border: 0;
     top: 120%;
+    left: -170%;
+}
+
+.nav-item-dropdown-lv-1 > ul.dropdown-menu::before {
+    content: "";
+    width: 0; 
+    height: 0; 
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid hsl(220, 13%, 95.5%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -12px;
 }
 
 .dropdown-submenu {
-    padding: 10px 20px;
+    padding: 0;
 }
 
 a:not([href]):not([tabindex]) {
     color: #4E3EB1;
     width: 100%;
     height: 100%;
+    display: block;
+    padding: 15px 24px;
 }
 
 .dropdown-submenu:hover {
@@ -108,7 +124,7 @@ a:not([href]):not([tabindex]) {
 .dropdown-submenu .dropdown-menu {
     width: 530px;
     top: 0;
-    right: -160px;
+    right: -143%;
     left: initial;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -117,8 +133,8 @@ a:not([href]):not([tabindex]) {
 
 ul.dropdown-submenu-lv-3 {
     margin: 0;
-    padding-top: 16px;
-    padding-left: 38px;
+    padding-top: 20px;
+    padding-left: 50px;
 }
 
 .dropdown-submenu-lv-3 .dropdown-item {
