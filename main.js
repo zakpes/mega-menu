@@ -59,19 +59,27 @@ $(function() {
   // ------------------------------------------------------- //
   // Multi Level dropdowns
   // ------------------------------------------------------ //
-  $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+  // $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+  $(".dropdown-submenu .dropdown-toggle").on("click", function(event) {
     event.preventDefault();
     event.stopPropagation();
 
+    $(this).toggleClass("active");
+    
+    if ($(this).parent().siblings().children(".dropdown-toggle").hasClass("active")) {
+      $(this).parent().siblings().children(".dropdown-toggle").removeClass("active");
+      $(this).parent().siblings().children(".dropdown-toggle").siblings().removeClass("show");
+    }
+    
     $(this).siblings().toggleClass("show");
 
 
-    if (!$(this).next().hasClass('show')) {
-      $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-    }
-    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-      $('.dropdown-submenu .show').removeClass("show");
-    });
+    // if (!$(this).next().hasClass('show')) {
+    //   $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    // }
+    // $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    //   $('.dropdown-submenu .show').removeClass("show");
+    // });
 
     // $(this).parent(".dropdown-submenu").siblings().children(".dropdown-menu").toggleClass("show");
 
