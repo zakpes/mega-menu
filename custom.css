@@ -36,7 +36,7 @@ body {
     margin-bottom: 6px
 }
 
-.btn {
+/* .btn {
     background-color: #d2322d;
     border-color: #d2322d
 }
@@ -51,7 +51,7 @@ body {
 .btn:active {
     box-shadow: inset 0 -62px 0px rgba(0, 0, 0, 0.5);
     color: #fff !important
-}
+} */
 
 a.dropdown-toggle,
 #dropdownMenu6-1 a,
@@ -62,7 +62,7 @@ a.dropdown-toggle,
 }
 
 .nav-item.dropdown {
-    margin: 0 20px;
+    margin: 0 12px;
 }
 
 .dropdown-toggle::after {
@@ -72,7 +72,7 @@ a.dropdown-toggle,
 .navbar-expand-md {
     box-shadow: 0px 2px 2px hsl(0, 0%, 73.7%);
     background-color: #fff;
-    padding-left: 70px;
+    padding-left: 30px;
 }
 
 a:not([href]):not([tabindex]).dropdown-toggle-level-1 {
@@ -243,9 +243,9 @@ ul.dropdown-submenu-lv-3 {
 	color: hsl(261.6, 100%, 88%);
 }
 
-/* .banner a:hover .banner a::after {
+.banner a:hover::after {
     border-left: 10px solid hsl(261.6, 100%, 88%);
-} */
+}
 
 .banner a::after {
     content: "";
@@ -329,6 +329,7 @@ body {
     height: 1000px;
     padding-bottom: 200px;
 }
+
 .banner {
 	width: 100%;
 	background-color: hsl(248.6, 49.8%, 46.9%);
@@ -358,4 +359,70 @@ body {
 .banner a::after {
 	right: -12px;
 	bottom: 16px;
+}
+
+.btn-solo {
+	background-color: hsl(247.8, 100%, 68.2%);
+	border: 0;
+	text-transform: uppercase;
+	color: #fff;
+	width: 160px;
+	height: 35px;
+	padding: 0;
+	text-align: center;
+	padding-top: 4px;
+	letter-spacing: 1px;
+}
+
+.btn-solo:hover {
+    color: hsl(261.6, 100%, 88%);
+	background-color: hsl(247.8, 100%, 68.2%);
+
+}
+
+.search-input {
+    right: -70px;
+}
+
+.form-search {
+	margin-top: 9px;
+	position: relative;
+}
+
+.btn-search {
+    position: absolute;
+    right: -8px;
+    top: -6px;
+}
+
+.icon-search {
+	height: auto;
+	width: 22px;
+}
+
+#dropdownMenu7-1 {
+	font-size: 14px;
+	vertical-align: bottom;
+    margin-top: 2px;
+    color: hsl(214.3, 5.9%, 46.3%);
+}
+
+#dropdownMenu7-1::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid hsl(212.3, 7%, 36.7%);
+	border-right: 5px solid transparent;
+	position: absolute;
+	right: -8px;
+	bottom: 20px;
+}
+
+#dropdown-menu-seventh {
+    left: -44px;
+}
+
+#dropdown-menu-seventh::after {
+    left: 70px;
 }

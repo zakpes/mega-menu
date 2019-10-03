@@ -59,6 +59,7 @@ $(function() {
   // ------------------------------------------------------- //
   // Multi Level dropdowns
   // ------------------------------------------------------ //
+
   // $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
   $(".dropdown-submenu .dropdown-toggle").on("click", function(event) {
     event.preventDefault();
