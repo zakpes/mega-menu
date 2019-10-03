@@ -387,12 +387,39 @@ body {
 .form-search {
 	margin-top: 9px;
 	position: relative;
+	width: 176px;
 }
 
+.form-search:hover .input-search,
+.form-search:active .input-search,
+.form-search:focus .input-search {
+    width: 100%;
+    border-bottom: 1px solid hsl(0, 0%, 44.3%);
+    z-index: 3;
+}
+
+.form-search .input-search {
+	width: 0%;
+	position: absolute;
+	right: 0;
+	top: 0;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 0px solid hsl(0, 0%, 44.3%);
+    transition: all 200ms;
+}
+
+.input-search:focus,
+.input-search:active {
+    width: 100%;
+    border-bottom: 1px solid hsl(0, 0%, 44.3%);
+    z-index: 3;
+}
 .btn-search {
     position: absolute;
     right: -8px;
     top: -6px;
+    z-index: 4;
 }
 
 .icon-search {
@@ -405,6 +432,9 @@ body {
 	vertical-align: bottom;
     margin-top: 2px;
     color: hsl(214.3, 5.9%, 46.3%);
+    position: relative;
+    right: -150px;
+    z-index: 2;
 }
 
 #dropdownMenu7-1::before {
@@ -416,11 +446,11 @@ body {
 	border-right: 5px solid transparent;
 	position: absolute;
 	right: -8px;
-	bottom: 20px;
+	top: 26px;
 }
 
 #dropdown-menu-seventh {
-    left: -44px;
+    left: 144%;
 }
 
 #dropdown-menu-seventh::after {
