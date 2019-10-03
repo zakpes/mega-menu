@@ -61,6 +61,7 @@ $(function() {
   // ------------------------------------------------------ //
 
   // $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+
   $(".dropdown-submenu .dropdown-toggle").on("click", function(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -74,6 +75,7 @@ $(function() {
     
     $(this).siblings().toggleClass("show");
 
+    
 
     // if (!$(this).next().hasClass('show')) {
     //   $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
@@ -85,4 +87,22 @@ $(function() {
     // $(this).parent(".dropdown-submenu").siblings().children(".dropdown-menu").toggleClass("show");
 
   });
+
+  $(".dropdown-toggle-lv-1").click(function() {
+    $(this).toggleClass("highlight");
+    $(this).parent().siblings().children(".dropdown-toggle-lv-1").removeClass("highlight");
+  });
+  
+  // $("dropdown").on("show.bs.dropdown" , function(e) {
+  //   $(this).find(".dropdown-menu").first().stop(true, true),slideDown();
+  // });
+
 });
+
+$(".nav-item-dropdown-lv-1").hover(function() {
+  $(this).children("ul.dropdown-menu").toggleClass("show");
+});
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}

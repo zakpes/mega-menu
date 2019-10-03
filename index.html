@@ -37,20 +37,26 @@
         <div class="container-fluid">
 
         <!--  NAVBAR  -->
-        <nav class="navbar navbar-expand-md">
+        <nav class="navbar navbar-expand-lg">
 
-            <a class="navbar-brand" href="#">Logo Here</a>
+            <a class="navbar-brand d-none d-lg-block" href="#">Logo Here</a>
 
-            <button class="navbar-toggler navbar-light mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler navbar-light float-left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
             </button>
+
+            <a class="navbar-brand d-block d-lg-none mr-auto float-left" href="#">Logo Here</a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
 
                     <!-- lv one dropdown -->
                     <li class="nav-item dropdown nav-item-dropdown-lv-1">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-lv-1-1" id="dropdownMenu1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-lv-1 dropdown-toggle-lv-1-1" id="dropdownMenu1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
                         
                             
                         <ul class="dropdown-menu" id="dropdown-menu-first" aria-labelledby="dropdownMenu1">
@@ -58,7 +64,7 @@
                             <!-- lv two dropdown -->
                             <li class="dropdown-submenu">
                                 <a class="dropdown-toggle active" id="dropdownMenu1-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Why us?</a>
-                                <ul class="dropdown-menu show dropdown-submenu-lv-3" aria-labelledby="dropdownMenu1-2">
+                                <ul class="dropdown-menu dropdown-submenu-lv-3" aria-labelledby="dropdownMenu1-2">
                                     <div class="submenu left">
                                         <div class="lv-3-link-item">
                                             <a class="dropdown-item" href="#">Products Overview</a>
@@ -174,7 +180,7 @@
 
                     <!-- lv one dropdown -->
                     <li class="nav-item dropdown nav-item-dropdown-lv-1">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-lv-2-1" id="dropdownMenu2-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solutions</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-lv-1 dropdown-toggle-lv-2-1" id="dropdownMenu2-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solutions</a>
                         <ul id="dropdown-menu-second" class="dropdown-menu" aria-labelledby="dropdownMenu2-1">
 
                             <!-- lv two dropdown -->
@@ -268,7 +274,7 @@
 
                     <!-- lv one dropdown 3 -->
                     <li class="nav-item dropdown nav-item-dropdown-lv-1">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-lv-3-1" id="dropdownMenu3-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-lv-1 dropdown-toggle-lv-3-1" id="dropdownMenu3-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
                         <ul id="dropdown-menu-third" class="dropdown-menu" aria-labelledby="dropdownMenu3-1">
 
                             <!-- lv two dropdown -->
@@ -410,10 +416,18 @@
                     </li>
 
                     <!-- lv one dropdown 8 -->
-                    <li class="nav-item dropdown nav-item-dropdown-lv-1 search-container">
+                    <li class="nav-item dropdown nav-item-dropdown-lv-1 search-container d-none d-lg-block">
                         <form class="form-inline form-search" action="" name="search">
-                            <input class="form-control input-search" type="text" placeholder="Search">
+                            <input class="form-control input-search" type="text" placeholder="Search...">
                             <button class="btn btn-search" type="submit"><img class="icon-search" src="./search.svg" alt="Search icon"></button>
+                        </form>
+                    </li>
+
+                    <!-- lv one dropdown 8 -->
+                    <li class="nav-item dropdown nav-item-dropdown-lv-1 search-container-mobile d-block d-lg-none">
+                        <form class="form-inline form-search-mobile" action="" name="search">
+                            <button class="btn btn-search" type="submit"><img class="icon-search" src="./search.svg" alt="Search icon"></button>
+                            <input class="form-control input-search-mobile" type="text" placeholder="Search...">
                         </form>
                     </li>
                 </ul>
@@ -421,7 +435,8 @@
 
             <a class="btn btn-solo" href="#">Start free trial</a>
         </nav>
-        </div>
+        
+        </d>
         
     </header><!-- /header -->
 
