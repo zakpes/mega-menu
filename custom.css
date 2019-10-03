@@ -266,18 +266,18 @@ ul.dropdown-submenu-lv-3 {
 #dropdown-menu-first {
 	left: -146px;
 	height: 390px;
-	width: 900px;
+	width: 800px;
 	padding-right: 530px;
 }
 
 #dropdown-menu-second {
-	width: 739px;
+	width: 800px;
     height: 300px;
     padding-right: 530px
 }
 
 #dropdown-menu-third {
-	width: 739px;
+	width: 800px;
     height: 390px;
     padding-right: 530px
 }
@@ -396,7 +396,7 @@ body {
 .btn-solo:hover {
     color: hsl(261.6, 100%, 88%);
 	background-color: hsl(247.8, 100%, 68.2%);
-
+    box-shadow: none;
 }
 
 .search-input {
@@ -454,7 +454,7 @@ body {
     margin-top: 2px;
     color: hsl(214.3, 5.9%, 46.3%);
     position: relative;
-    right: -150px;
+    right: 0;
     z-index: 2;
 }
 
@@ -471,12 +471,55 @@ body {
 }
 
 #dropdown-menu-seventh {
-    left: 144%;
+	left: 0;
+	background-color: #fff;
+	border-radius: 5px;
+	top: 59px;
+	padding-top: 6px;
+	width: 220px;
+    padding-bottom: 15px;
+    top: 62px;
+}
+
+#dropdown-menu-seventh .dropdown-submenu {
+	margin-left: 40px;
+	/* padding: 0; */
+	margin-left: 15px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+#dropdown-menu-seventh .submenu-solo-link {
+	color: hsl(212.7, 5%, 56.7%);
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding: 15px 24px;
+	white-space: normal;
+	padding: 0;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+#dropdown-menu-seventh .account-name {
+	font-size: 15px;
 }
 
 #dropdown-menu-seventh::after {
+    display: none;
     left: 70px;
 }
+
+.nav-item-account {
+    position: absolute;
+    right: 220px;
+}
+
+.search-container {
+    position: absolute;
+    right: 172px;
+}
+
 
 /* responsive */
 
@@ -532,7 +575,7 @@ body {
     }
     
     #dropdown-menu-seventh {
-        left: -60%;
+        left: 0;
     }
 
     .form-search {
@@ -678,5 +721,10 @@ body {
 
     .dropdown-submenu .dropdown-menu {
         width: 100%;
+    }
+    
+    .nav-item-account {
+        position: relative;
+        right: 0;
     }
 }
