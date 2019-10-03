@@ -106,7 +106,7 @@ $(function() {
 
 });
 
-$(".nav-item-dropdown-lv-1").hover(function() {
+$(".nav-item-dropdown-lv-1").not(".nav-item-dropdown-lv-1-more .nav-item-dropdown-lv-1").hover(function() {
 
   if ($(window).width() >= 992) {
     $(this).children("ul.dropdown-menu").toggleClass("show");
