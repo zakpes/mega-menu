@@ -216,6 +216,7 @@ ul.dropdown-submenu-lv-3 {
 .dropdown-submenu-lv-3 .submenu {
     width: 40%;
     display: inline-block;
+    float: left;
 }
 
 .banner {
@@ -264,7 +265,7 @@ ul.dropdown-submenu-lv-3 {
 /* wide dropdowns */
 #dropdown-menu-first {
 	left: -146px;
-	height: 366px;
+	height: 390px;
 	width: 900px;
 	padding-right: 530px;
 }
@@ -277,7 +278,7 @@ ul.dropdown-submenu-lv-3 {
 
 #dropdown-menu-third {
 	width: 739px;
-    height: 366px;
+    height: 390px;
     padding-right: 530px
 }
 
@@ -364,8 +365,7 @@ body {
 	top: 0;
     right: 0;
     left: initial;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+	border-radius: 0;
 	background-color: #fff;
 }
 
