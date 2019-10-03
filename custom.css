@@ -671,4 +671,12 @@ body {
     .form-search-mobile .input-search-mobile:focus {
         box-shadow: none;
     }
+    
+    .dropdown-submenu-lv-3 .submenu {
+        float: none;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        width: 100%;
+    }
 }
