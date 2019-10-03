@@ -73,14 +73,14 @@ $(function() {
     event.preventDefault();
     event.stopPropagation();
 
-    $(this).toggleClass("active");
+    $(this).addClass("active");
     
     if ($(this).parent().siblings().children(".dropdown-toggle").hasClass("active")) {
       $(this).parent().siblings().children(".dropdown-toggle").removeClass("active");
       $(this).parent().siblings().children(".dropdown-toggle").siblings().removeClass("show");
     }
     
-    $(this).siblings().toggleClass("show");
+    $(this).siblings().addClass("show");
 
     
 
@@ -111,6 +111,12 @@ $(".nav-item-dropdown-lv-1").hover(function() {
   if ($(window).width() >= 992) {
     $(this).children("ul.dropdown-menu").toggleClass("show");
   }
+  // $(".dropdown-container-lv-1").hover(function() {
+  
+  //   if ($(window).width() >= 992) {
+  //     $(this).find("ul.dropdown-menu").toggleClass("show");
+  //   }
+  
 
 });
 
