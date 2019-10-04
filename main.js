@@ -82,17 +82,6 @@ $(function() {
     
     $(this).siblings().addClass("show");
 
-    
-
-    // if (!$(this).next().hasClass('show')) {
-    //   $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-    // }
-    // $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-    //   $('.dropdown-submenu .show').removeClass("show");
-    // });
-
-    // $(this).parent(".dropdown-submenu").siblings().children(".dropdown-menu").toggleClass("show");
-
   });
 
   $(".dropdown-toggle-lv-1").click(function() {
@@ -111,14 +100,17 @@ $(".nav-item-dropdown-lv-1").not(".nav-item-dropdown-lv-1-more .nav-item-dropdow
   if ($(window).width() >= 992) {
     $(this).children("ul.dropdown-menu").toggleClass("show");
   }
+
+  
+
   // $(".dropdown-container-lv-1").hover(function() {
   
   //   if ($(window).width() >= 992) {
   //     $(this).find("ul.dropdown-menu").toggleClass("show");
   //   }
   
-
 });
+
 
 function myFunction(x) {
   x.classList.toggle("change");
