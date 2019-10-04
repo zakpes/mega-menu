@@ -5,12 +5,8 @@
 //# sourceMappingURL=popper.min.js.map
 
 $(function() {
-    // ------------------------------------------------------- //
+
     // Multi Level dropdowns
-    // ------------------------------------------------------ //
-  
-    // $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
-  
     $(document).ready(function() {
       if ($(window).width() >= 992) {
         $(".first-menu-active .dropdown-toggle").addClass("active");
@@ -78,16 +74,6 @@ $(function() {
       }
     });
   
-    // $(".nav-item-dropdown-lv-1").click(function() {
-    //   $(this).toggleClass("caret-right");
-    //   $(this).toggleClass("caret-left");
-    //   // $(this).parent().siblings().children(".dropdown-toggle-lv-1").removeClass("highlight");
-    // });
-    
-    // $("dropdown").on("show.bs.dropdown" , function(e) {
-    //   $(this).find(".dropdown-menu").first().stop(true, true),slideDown();
-    // });
-  
   });
   
   $(".nav-item-dropdown-lv-1").not(".nav-item-dropdown-lv-1-more .nav-item-dropdown-lv-1").hover(function() {
@@ -95,14 +81,6 @@ $(function() {
     if ($(window).width() >= 992) {
       $(this).children("ul.dropdown-menu").toggleClass("show");
     }
-  
-    
-  
-    // $(".dropdown-container-lv-1").hover(function() {
-    
-    //   if ($(window).width() >= 992) {
-    //     $(this).find("ul.dropdown-menu").toggleClass("show");
-    //   }
     
   });
   
