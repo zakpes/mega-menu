@@ -112,6 +112,23 @@ $(".nav-item-dropdown-lv-1").not(".nav-item-dropdown-lv-1-more .nav-item-dropdow
 });
 
 
+// move account on form focus
+$("#form-search-main").mouseover(function() {
+  $("#account-item-main").addClass("move-left");
+});
+
+$("#form-search-main").focusin(function() {
+  $("#account-item-main").addClass("stay-left");
+});
+
+$("#form-search-main").focusout(function() {
+  $("#account-item-main").removeClass("stay-left");
+});
+
+$("#form-search-main").mouseout(function() {
+  $("#account-item-main").removeClass("move-left");
+});
+
 function myFunction(x) {
   x.classList.toggle("change");
 }
