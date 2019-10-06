@@ -1476,6 +1476,14 @@ $(function() {
       $(this).siblings().addClass("show");
   
     });
+
+    $("#hamburgerBtn").click(function() {
+      $(".dropdown-toggle-lv-1").removeClass("highlight");
+      
+      if ($(".nav-item-dropdown-lv-1").hasClass("caret-left")) {
+        $(".nav-item-dropdown-lv-1").removeClass("caret-left").addClass("caret-right");
+      }
+    });
   
     $(".dropdown-toggle-lv-1").click(function() {
       $(this).toggleClass("highlight");
@@ -1509,13 +1517,6 @@ $(function() {
     if ($(window).width() >= 992) {
       $(this).children("ul.dropdown-menu").toggleClass("show");
     }
-    
-  });
-
-  // hover on more
-  $(".navbar-nav").hover(function() {
-
-      $("#dropdown-menu-third").toggleClass("foo");
     
   });
 
