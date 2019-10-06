@@ -1439,6 +1439,9 @@ $(function() {
       if ($(window).width() >= 992) {
         $(".first-menu-active .dropdown-toggle").addClass("active");
         $(".first-menu-active .dropdown-menu").addClass("show");
+
+
+        
       }
   
         // add mobile carets on load
@@ -1446,6 +1449,9 @@ $(function() {
         $(".dropdown-submenu .dropdown-toggle").addClass("caret-down");
       
       });
+
+
+       
 
     $(window).resize(function() {
         $(".dropdown-menu").not(".dropdown-submenu-lv-3").removeClass("show");
@@ -1474,7 +1480,8 @@ $(function() {
       }
       
       $(this).siblings().addClass("show");
-  
+
+      
     });
 
     $("#hamburgerBtn").click(function() {
@@ -1516,9 +1523,32 @@ $(function() {
   
     if ($(window).width() >= 992) {
       $(this).children("ul.dropdown-menu").toggleClass("show");
+
+
     }
     
   });
+
+  // calculate height
+  $(".nav-item-dropdown-lv-1").not(".nav-item-dropdown-lv-1-more.nav-item-dropdown-lv-1").one("mouseenter", function() {
+  
+    if ($(window).width() >= 992) {
+        let maxHeight = 0;
+
+        $(this).find(".dropdown-menu").find(".dropdown-submenu-lv-3").each(function(){
+          let thisH = $(this).height();
+          if (thisH > maxHeight) { maxHeight = thisH; }
+        });
+
+        // calculate height on menu opening
+        if ($(this).find(".dropdown-menu").height() < maxHeight) {
+          $(this).find(".dropdown-menu").css({"min-height": maxHeight + 70});
+
+        }
+        // let submenuH = $(".dropdown-submenu-lv-3").height();
+    }
+  });
+
 
   // move account on form focus
   $("#form-search-main").mouseover(function() {
